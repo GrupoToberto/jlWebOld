@@ -25,6 +25,10 @@ div[class^="col-left"]{
         justify-content: flex-start;
 }
 
+h1{
+        margin:0;
+}
+
 @media screen and (max-width: 1399px) { /*xl*/
         
         .fa{
@@ -70,10 +74,6 @@ div[class^="col-left"]{
                 padding: 8px;
         }
 
-        h1{
-                font-size:2.5em;
-        }
-
 }
 
 @media screen and (max-width: 575px) { /*xs*/
@@ -81,10 +81,6 @@ div[class^="col-left"]{
         .fa{
                 font-size: 2em;
                 padding: 7px;
-        }
-
-        h1{
-                font-size:3em;
         }
 
 }
