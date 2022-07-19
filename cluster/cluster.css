@@ -11,18 +11,16 @@ div[class^="container"]{
 	width:100%;
 }
 
-@media screen and (max-width: 575px) { /*xs*/
+@media screen and (max-width: 1399px) { /*xl*/
         
-        .fa{
-                font-size: 2em;
-        }
+        
 
 }
 
-@media screen and (max-width: 767px) { /*sm*/
+@media screen and (max-width: 1199px) { /*lg*/
         
         .fa{
-                font-size: 1.5em;
+                font-size: 0.875em;
         }
 
 }
@@ -35,16 +33,18 @@ div[class^="container"]{
 
 }
 
-@media screen and (max-width: 1199px) { /*lg*/
+@media screen and (max-width: 767px) { /*sm*/
         
         .fa{
-                font-size: 0.875em;
+                font-size: 1.5em;
         }
 
 }
 
-@media screen and (max-width: 1399px) { /*xl*/
+@media screen and (max-width: 575px) { /*xs*/
         
-        
+        .fa{
+                font-size: 2em;
+        }
 
 }
