@@ -10,3 +10,11 @@ header{
 div[class^="container"]{
 	width:100%;
 }
+
+@media screen and (max-width: 575px) { /*xs*/
+        
+        i{
+                font-size: x-large;
+        }
+
+}
