@@ -13,8 +13,38 @@ div[class^="container"]{
 
 @media screen and (max-width: 575px) { /*xs*/
         
-        i{
-                font-size: x-large;
+        .fa{
+                font-size: 2em;
         }
+
+}
+
+@media screen and (max-width: 767px) { /*sm*/
+        
+        .fa{
+                font-size: 1.5em;
+        }
+
+}
+
+@media screen and (max-width: 991px) { /*md*/
+        
+        .fa{
+                font-size: 1.25em;
+        }
+
+}
+
+@media screen and (max-width: 1199px) { /*lg*/
+        
+        .fa{
+                font-size: 0.875em;
+        }
+
+}
+
+@media screen and (max-width: 1399px) { /*xl*/
+        
+        
 
 }
