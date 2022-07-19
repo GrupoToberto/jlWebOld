@@ -13,7 +13,9 @@ div[class^="container"]{
 
 @media screen and (max-width: 1399px) { /*xl*/
         
-        
+        .fa{
+                padding: 15px;
+        }
 
 }
 
@@ -21,6 +23,7 @@ div[class^="container"]{
         
         .fa{
                 font-size: 1.25em;
+                padding: 10px;
         }
 
 }
@@ -29,6 +32,7 @@ div[class^="container"]{
         
         .fa{
                 font-size: 1.5em;
+                padding: 9px;
         }
 
 }
@@ -37,6 +41,7 @@ div[class^="container"]{
         
         .fa{
                 font-size: 1.75em;
+                padding: 8px;
         }
 
 }
@@ -45,6 +50,7 @@ div[class^="container"]{
         
         .fa{
                 font-size: 2em;
+                padding: 7px;
         }
 
 }
