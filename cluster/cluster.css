@@ -17,10 +17,13 @@ div[class^="container"], div[class^="row"]{
 div[class^="col"]{
         -ms-flex: 1;  /* IE 10 */  
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 }
 
 div[class^="col-left"]{
-        justify-self: flex-start;
+        justify-content: flex-start;
 }
 
 @media screen and (max-width: 1399px) { /*xl*/
