@@ -20,7 +20,7 @@ div[class^="container"]{
 @media screen and (max-width: 1199px) { /*lg*/
         
         .fa{
-                font-size: 0.875em;
+                font-size: 1.25em;
         }
 
 }
@@ -28,7 +28,7 @@ div[class^="container"]{
 @media screen and (max-width: 991px) { /*md*/
         
         .fa{
-                font-size: 1.25em;
+                font-size: 1.5em;
         }
 
 }
@@ -36,7 +36,7 @@ div[class^="container"]{
 @media screen and (max-width: 767px) { /*sm*/
         
         .fa{
-                font-size: 1.5em;
+                font-size: 1.75em;
         }
 
 }
