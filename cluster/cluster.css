@@ -58,24 +58,24 @@ p{
 @media screen and (max-width: 1399px) { /*xl*/
         
         .fa{
-                font-size: calc(1rem * -xl-font-factor);
-                padding: calc(0.5rem * -xl-font-factor);
+                font-size: calc(1rem * var(--xl-font-factor));
+                padding: calc(0.5rem * var(--xl-font-factor));
         }
 
         h1{
-                font-size:calc(2rem * -xl-font-factor);
+                font-size:calc(2rem * var(--xl-font-factor));
         }
 
         div{
-                font-size:calc(1rem * -xl-font-factor);
+                font-size:calc(1rem * var(--xl-font-factor));
         }
 
         main{
-                padding:calc(1rem * -xl-font-factor);
+                padding:calc(1rem * var(--xl-font-factor));
         }
 
         li{
-                margin:calc(0.5rem * -xl-font-factor);
+                margin:calc(0.5rem * var(--xl-font-factor));
         }
 
 }
@@ -83,24 +83,24 @@ p{
 @media screen and (max-width: 1199px) { /*lg*/
         
         .fa{
-                font-size: calc(1rem * -lg-font-factor);
-                padding: calc(0.5rem * -lg-font-factor);
+                font-size: calc(1rem * var(--lg-font-factor));
+                padding: calc(0.5rem * var(--lg-font-factor));
         }
 
         h1{
-                font-size:calc(2rem * -lg-font-factor);
+                font-size:calc(2rem * var(--lg-font-factor));
         }
 
         div{
-                font-size:calc(1rem * -lg-font-factor);
+                font-size:calc(1rem * var(--lg-font-factor));
         }
 
         main{
-                padding:calc(1rem * -lg-font-factor);
+                padding:calc(1rem * var(--lg-font-factor));
         }
 
         li{
-                margin:calc(0.5rem * -lg-font-factor);
+                margin:calc(0.5rem * var(--lg-font-factor));
         }
 
 }
@@ -108,24 +108,24 @@ p{
 @media screen and (max-width: 991px) { /*md*/
         
         .fa{
-                font-size: calc(1rem * -md-font-factor);
-                padding: calc(0.5rem * -md-font-factor);
+                font-size: calc(1rem * var(--md-font-factor));
+                padding: calc(0.5rem * var(--md-font-factor));
         }
 
         h1{
-                font-size:calc(2rem * -md-font-factor);
+                font-size:calc(2rem * var(--md-font-factor));
         }
 
         div{
-                font-size:calc(1rem * -md-font-factor);
+                font-size:calc(1rem * var(--md-font-factor));
         }
 
         main{
-                padding:calc(1rem * -md-font-factor);
+                padding:calc(1rem * var(--md-font-factor));
         }
 
         li{
-                margin:calc(0.5rem * -md-font-factor);
+                margin:calc(0.5rem * var(--md-font-factor));
         }
         
 }
@@ -133,24 +133,24 @@ p{
 @media screen and (max-width: 767px) { /*sm*/
         
         .fa{
-                font-size: calc(1rem * -sm-font-factor);
-                padding: calc(0.5rem * -sm-font-factor);
+                font-size: calc(1rem * var(--sm-font-factor));
+                padding: calc(0.5rem * var(--sm-font-factor));
         }
 
         h1{
-                font-size:calc(2rem * -sm-font-factor);
+                font-size:calc(2rem * var(--sm-font-factor));
         }
 
         div{
-                font-size:calc(1rem * -sm-font-factor);
+                font-size:calc(1rem * var(--sm-font-factor));
         }
 
         main{
-                padding:calc(1rem * -sm-font-factor);
+                padding:calc(1rem * var(--sm-font-factor));
         }
 
         li{
-                margin:calc(0.5rem * -sm-font-factor);
+                margin:calc(0.5rem * var(--sm-font-factor));
         }
 
 }
@@ -158,24 +158,24 @@ p{
 @media screen and (max-width: 575px) { /*xs*/
         
         .fa{
-                font-size: calc(1rem * -xs-font-factor);
-                padding: calc(0.5rem * -xs-font-factor);
+                font-size: calc(1rem * var(--xs-font-factor));
+                padding: calc(0.5rem * var(--xs-font-factor));
         }
 
         h1{
-                font-size:calc(2rem * -xs-font-factor);
+                font-size:calc(2rem * var(--xs-font-factor));
         }
 
         div{
-                font-size:calc(1rem * -xs-font-factor);
+                font-size:calc(1rem * var(--xs-font-factor));
         }
 
         main{
-                padding:calc(1rem * -xs-font-factor);
+                padding:calc(1rem * var(--xs-font-factor));
         }
 
         li{
-                margin:calc(0.5rem * -xs-font-factor);
+                margin:calc(0.5rem * var(--xs-font-factor));
         }
 
 }
