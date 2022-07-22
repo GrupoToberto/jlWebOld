@@ -2,8 +2,8 @@
         --xl-font-factor: 1.25;
         --lg-font-factor: 1;
         --md-font-factor: 0.75;
-        --sm-font-factor: 2;
-        --xs-font-factor: 2.5;
+        --sm-font-factor: 0.5;
+        --xs-font-factor: 0.25;
       }
 
 html, body{
