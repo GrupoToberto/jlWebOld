@@ -1,15 +1,13 @@
 <?php
-	
-	class User
+	namespace com\grupotoberto\controller\php      
+
+	class SessionManager
 	{
-		public function __construct()
-		{
-			$this->loginTime=3600; // 1 hour
-		}
+		private static $loginTime=3600; // 1 hour
 		
-		public function setLoginTime($loginTime)
+		public static function setLoginTime($loginTime)
 		{
-			$this->loginTime=$loginTime;
+			$self::$loginTime=$loginTime;
 		}
 		
 		public function resetLoginDate()
