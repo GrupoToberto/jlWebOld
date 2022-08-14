@@ -1,4 +1,5 @@
 <?php
+        namespace com\grupotoberto\controller\php      
 
 	class WebManager
 	{
