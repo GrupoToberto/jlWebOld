@@ -10,10 +10,10 @@
 			$self::$loginTime=$loginTime;
 		}
 		
-		public function resetLoginDate()
+		public static function resetLoginDate()
 		{
 			$cookieData=session_get_cookie_params(); 
-			session_set_cookie_params($this->loginTime,$cookieData["path"], 
+			session_set_cookie_params($self::$loginTime,$cookieData["path"], 
 			$cookieData["domain"], $cookieData["secure"], 
 			$cookieData["httponly"]);
 			
@@ -22,7 +22,7 @@
 			$_SESSION['loginDate']=time();
 		}
 		
-		public function logout()
+		public static function logout()
 		{
 			unset($_SESSION); 
 			$cookieData=session_get_cookie_params(); 
@@ -31,7 +31,7 @@
 			$cookieData["httponly"]); 
 		}
 		
-		private function getLastAccess()
+		private static function getLastAccess()
 		{
 			$lastAccess=0; 
 			
@@ -41,11 +41,11 @@
 			return $lastAccess; 
 		}
 		
-		private function getSesionStatus()
+		private static function getSesionStatus()
 		{
 			$status=false; 
-			$lastAccess=$this->getLastAccess(); 
-			$lastAccessLimit=$lastAccess+$this->loginTime; //In seconds
+			$lastAccess=$self::getLastAccess(); 
+			$lastAccessLimit=$lastAccess+$self::$loginTime; //In seconds
 			
 			if($lastAccessLimit>time())
 			{ 
@@ -55,11 +55,11 @@
 			return $status;
 		}
 		
-		public function validateSession()
+		public static function validateSession()
 		{
-			if(!$this->getSesionStatus())
+			if(!$self::getSesionStatus())
 			{ 
-				$this->logout();
+				$self::logout();
 				return false;
 			} 
 			else
