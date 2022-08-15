@@ -1,5 +1,5 @@
 <?php
-	namespace com\grupotoberto\controller
+	namespace com\grupotoberto\controller;
 
 	class SessionManager
 	{
