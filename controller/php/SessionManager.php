@@ -24,7 +24,7 @@
 		
 		public static function logout()
 		{
-			\unset($_SESSION); 
+			unset($_SESSION); 
 			$cookieData=\session_get_cookie_params(); 
 			\setcookie(\session_name(), NULL, \time()-999999, $cookieData["path"], 
 			$cookieData["domain"], $cookieData["secure"], 
@@ -35,7 +35,7 @@
 		{
 			$lastAccess=0; 
 			
-			if(\isset($_SESSION['loginDate']))
+			if(isset($_SESSION['loginDate']))
 				$lastAccess=$_SESSION['loginDate']; 
 				
 			return $lastAccess; 
