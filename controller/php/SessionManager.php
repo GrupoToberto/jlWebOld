@@ -12,21 +12,21 @@
 		
 		public static function resetLoginDate()
 		{
-			$cookieData=session_get_cookie_params(); 
-			session_set_cookie_params($self::$loginTime,$cookieData["path"], 
+			$cookieData=\session_get_cookie_params(); 
+			\session_set_cookie_params($self::$loginTime,$cookieData["path"], 
 			$cookieData["domain"], $cookieData["secure"], 
 			$cookieData["httponly"]);
 			
 			session_start();
 			
-			$_SESSION['loginDate']=time();
+			$_SESSION['loginDate']=\time();
 		}
 		
 		public static function logout()
 		{
-			unset($_SESSION); 
-			$cookieData=session_get_cookie_params(); 
-			setcookie(session_name(), NULL, time()-999999, $cookieData["path"], 
+			\unset($_SESSION); 
+			$cookieData=\session_get_cookie_params(); 
+			\setcookie(\session_name(), NULL, \time()-999999, $cookieData["path"], 
 			$cookieData["domain"], $cookieData["secure"], 
 			$cookieData["httponly"]); 
 		}
@@ -35,7 +35,7 @@
 		{
 			$lastAccess=0; 
 			
-			if(isset($_SESSION['loginDate']))
+			if(\isset($_SESSION['loginDate']))
 				$lastAccess=$_SESSION['loginDate']; 
 				
 			return $lastAccess; 
@@ -47,10 +47,10 @@
 			$lastAccess=$self::getLastAccess(); 
 			$lastAccessLimit=$lastAccess+$self::$loginTime; //In seconds
 			
-			if($lastAccessLimit>time())
+			if($lastAccessLimit>\time())
 			{ 
 				$status=true; 
-				$_SESSION['loginDate']=time();
+				$_SESSION['loginDate']=\time();
 			}
 			return $status;
 		}

@@ -29,12 +29,12 @@
 		{
 			$filename=$_SERVER['DOCUMENT_ROOT'].$self::$resFolder.$self::$errors;
 			
-			if(file_exists($filename))
+			if(\file_exists($filename))
 			{
-				$xml=simplexml_load_file($filename);
+				$xml=\simplexml_load_file($filename);
 				
 				if(!$xml)
-                    throw new Exception('Error parsing XML document.');
+                    throw new \Exception('Error parsing XML document.');
 				
 				foreach($xml->error as $error)
 				{
@@ -43,12 +43,12 @@
 				}
 			}
 			else
-                throw new Exception('File not found.');
+                throw new \Exception('File not found.');
 		}
 		
 		public static function getMaxFileSize()
 		{
-			return $self::return_bytes(ini_get('upload_max_filesize'));
+			return $self::return_bytes(\ini_get('upload_max_filesize'));
 		}
 		
 		public static function getPhotosFolder()
@@ -65,12 +65,12 @@
 		{
 			$filename=$_SERVER['DOCUMENT_ROOT'].$self::$resFolder.$self::$strings;
 			
-			if(file_exists($filename))
+			if(\file_exists($filename))
 			{
-				$xml=simplexml_load_file($filename);
+				$xml=\simplexml_load_file($filename);
 				
 				if(!$xml)
-					throw new Exception('Error parsing XML document.');
+					throw new \Exception('Error parsing XML document.');
 				
 				foreach($xml->string as $string)
 				{
@@ -79,13 +79,13 @@
 				}
 			}
 			else
-				throw new Exception('File not found.');
+				throw new \Exception('File not found.');
 		}
 		
 		public static function return_bytes($val)
 		{
-			$val = trim($val);
-			$last = strtolower($val[strlen($val)-1]);
+			$val = \trim($val);
+			$last = \strtolower($val[\strlen($val)-1]);
 			switch($last) 
 			{
 				case 'g':
@@ -113,7 +113,7 @@
 
 		public static function startDB_Mysqli($host, $username, $pwd, $db)
 		{
-			$self::$dbMysqli = new mysqli($host, $username, $pwd, $db);
+			$self::$dbMysqli = new \mysqli($host, $username, $pwd, $db);
 			$dbMysqli=$self::$dbMysqli;
 			$dbMysqli->set_charset("utf8");
 		}
@@ -124,7 +124,7 @@
 			{
 				if($file['size']>$self::getMaxFileSize())
 				{
-					throw new Exception('The size of a file is longer than maximum permitted size.');
+					throw new \Exception('The size of a file is longer than maximum permitted size.');
 				}
 			}
 		}
