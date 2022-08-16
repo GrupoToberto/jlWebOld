@@ -12,22 +12,22 @@
 		
 		public static function closeDB_Mysqli()
 		{
-			$self::$dbMysqli->close();
+			self::$dbMysqli->close();
 		}
 
 		public static function getDB_Mysqli()
 		{
-			return $self::$dbMysqli;
+			return self::$dbMysqli;
 		}
 
 		public static function getDocsFolder()
 		{
-			return $self::$docsFolder;
+			return self::$docsFolder;
 		}
 
 		public static function getError($name)
 		{
-			$filename=$_SERVER['DOCUMENT_ROOT'].$self::$resFolder.$self::$errors;
+			$filename=$_SERVER['DOCUMENT_ROOT'].self::$resFolder.self::$errors;
 			
 			if(\file_exists($filename))
 			{
@@ -48,22 +48,22 @@
 		
 		public static function getMaxFileSize()
 		{
-			return $self::return_bytes(\ini_get('upload_max_filesize'));
+			return self::return_bytes(\ini_get('upload_max_filesize'));
 		}
 		
 		public static function getPhotosFolder()
 		{
-			return $self::$photosFolder;
+			return self::$photosFolder;
 		}
 		
 		public static function getPostMaxSize()
 		{
-			return $self::return_bytes(ini_get('post_max_size'));
+			return self::return_bytes(ini_get('post_max_size'));
 		}
 		
 		public static function getString($name)
 		{
-			$filename=$_SERVER['DOCUMENT_ROOT'].$self::$resFolder.$self::$strings;
+			$filename=$_SERVER['DOCUMENT_ROOT'].self::$resFolder.self::$strings;
 			
 			if(\file_exists($filename))
 			{
@@ -100,21 +100,21 @@
 		}
 		
 		public static function setDocsFolder($docsFolder){
-			$self::$docsFolder=$docsFolder;
+			self::$docsFolder=$docsFolder;
 		}
 
 		public static function setPhotosFolder($photosFolder){
-			$self::$photosFolder=$photosFolder;
+			self::$photosFolder=$photosFolder;
 		}
 
 		public static function setResFolder($resFolder){
-			$self::$resFolder=$resFolder;
+			self::$resFolder=$resFolder;
 		}
 
 		public static function startDB_Mysqli($host, $username, $pwd, $db)
 		{
-			$self::$dbMysqli = new \mysqli($host, $username, $pwd, $db);
-			$dbMysqli=$self::$dbMysqli;
+			self::$dbMysqli = new \mysqli($host, $username, $pwd, $db);
+			$dbMysqli=self::$dbMysqli;
 			$dbMysqli->set_charset("utf8");
 		}
 		
@@ -122,7 +122,7 @@
 		{
 			foreach($Files as $file)
 			{
-				if($file['size']>$self::getMaxFileSize())
+				if($file['size']>self::getMaxFileSize())
 				{
 					throw new \Exception('The size of a file is longer than maximum permitted size.');
 				}

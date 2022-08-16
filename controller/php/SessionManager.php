@@ -7,13 +7,13 @@
 		
 		public static function setLoginTime($loginTime)
 		{
-			$self::$loginTime=$loginTime;
+			self::$loginTime=$loginTime;
 		}
 		
 		public static function resetLoginDate()
 		{
 			$cookieData=\session_get_cookie_params(); 
-			\session_set_cookie_params($self::$loginTime,$cookieData["path"], 
+			\session_set_cookie_params(self::$loginTime,$cookieData["path"], 
 			$cookieData["domain"], $cookieData["secure"], 
 			$cookieData["httponly"]);
 			
@@ -44,8 +44,8 @@
 		private static function getSesionStatus()
 		{
 			$status=false; 
-			$lastAccess=$self::getLastAccess(); 
-			$lastAccessLimit=$lastAccess+$self::$loginTime; //In seconds
+			$lastAccess=self::getLastAccess(); 
+			$lastAccessLimit=$lastAccess+self::$loginTime; //In seconds
 			
 			if($lastAccessLimit>\time())
 			{ 
@@ -57,9 +57,9 @@
 		
 		public static function validateSession()
 		{
-			if(!$self::getSesionStatus())
+			if(!self::getSesionStatus())
 			{ 
-				$self::logout();
+				self::logout();
 				return false;
 			} 
 			else
