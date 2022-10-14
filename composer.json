@@ -1,0 +1,7 @@
+{
+    "name": "grupotoberto/controller",
+    "description": "Tools for php backend controllers OOP",
+    "require": {
+        "php": ">=7.3"
+    }
+}
