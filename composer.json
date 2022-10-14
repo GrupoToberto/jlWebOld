@@ -2,6 +2,7 @@
     "name": "grupotoberto/controller",
     "description": "Tools for php backend controllers OOP",
     "require": {
-        "php": ">=7.3"
+        "php": ">=7.3",
+	"grupotoberto/controller":">=v1.0.1-alpha"
     }
 }
