@@ -1,5 +1,12 @@
 class JlWebManager{
     
+    static #strings="jlStrings";
+
+    static getString(name){
+	var jsonName=eval(JlWebManager.#strings);
+	return eval("jsonName."+name+";");
+	}
+
     static includeHTML(){ //Gotten by w3schools
         var z, i, elmnt, file, xhttp;
         /* Loop through a collection of all HTML elements: */
