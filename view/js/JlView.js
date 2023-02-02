@@ -15,7 +15,7 @@ class JlView{
     findViewById(id){
         var tag=document.getElementById(this.#id+id).tagName.toLowerCase();
         tag=tag[0].toUpperCase()+tag.substring(1);
-        return eval('new Jl'+tag+'("'+id+'");');
+        return eval('new Jl'+tag+'("'this.#id+id+'");');
     }
 }
 
