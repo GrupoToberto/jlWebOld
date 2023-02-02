@@ -51,7 +51,7 @@ class JlH5 extends JlTextTag{
     }
 }
 
-class JlParagraph extends JlTextTag{
+class JlP extends JlTextTag{
     constructor(id){
         super(id);
     }
