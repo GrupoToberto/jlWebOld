@@ -36,6 +36,6 @@ class JlWebManager{
     static findViewById(id){
         var tag=document.getElementById(id).tagName.toLowerCase();
         tag=tag[0].toUpperCase()+tag.substring(1);
-        return eval('new '+tag+'("'+id+'");');
+        return eval('new Jl'+tag+'("'+id+'");');
     }
 }
