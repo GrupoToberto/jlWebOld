@@ -25,21 +25,6 @@ class JlDiv extends JlView{
     }
 }
 
-class JlA extends JlTextTag{
-    #href;
-
-    constructor(id){
-        super(id);
-    }
-
-    setH_Ref(href)
-	{
-		this.#href=href;
-		var link=document.getElementById(super.getId());
-		link.href=this.#href;
-	}
-}
-
 class JlImg extends JlView{
     #path;
 
@@ -73,6 +58,21 @@ class JlTextTag extends JlView{
         var textTag=document.getElementById(super.getId());
 		textTag.innerHTML=this.#text;
     }
+}
+
+class JlA extends JlTextTag{
+    #href;
+
+    constructor(id){
+        super(id);
+    }
+
+    setH_Ref(href)
+	{
+		this.#href=href;
+		var link=document.getElementById(super.getId());
+		link.href=this.#href;
+	}
 }
 
 class JlH5 extends JlTextTag{
