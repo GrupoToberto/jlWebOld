@@ -19,8 +19,9 @@ class JlWebManager{
             n=1;
 
             if(!file){
-                file = elmnt.getAttribute("jlRepeat").split(" ")[0];
-                n = eval(elmnt.getAttribute("jlRepeat").split(" ")[2]+".length");
+                file = elmnt.getAttribute("jlRepeat");
+                file = file ? file.split(" ")[0] : null;
+                n = file ? eval(elmnt.getAttribute("jlRepeat").split(" ")[2]+".length") : 0;
             }
 
             for(let j=0; j<n; j++){
