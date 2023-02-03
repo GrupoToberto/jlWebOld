@@ -25,6 +25,36 @@ class JlDiv extends JlView{
     }
 }
 
+class JlA extends JlTextTag{
+    #href;
+
+    constructor(id){
+        super(id);
+    }
+
+    setH_Ref(href)
+	{
+		this.#href=href;
+		var link=document.getElementById(super.getId());
+		link.href=this.#href;
+	}
+}
+
+class JlImg extends JlView{
+    #path;
+
+    constructor(id){
+        super(id);
+    }
+
+    setPath(path)
+	{
+		this.#path=path;
+		var pic=document.getElementById(super.getId());
+		pic.setAttribute("src", this.#path);
+	}
+}
+
 class JlTextTag extends JlView{
     #text;
 
