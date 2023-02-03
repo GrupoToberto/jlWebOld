@@ -40,7 +40,6 @@ class JlWebManager{
                         if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
                         /* Remove the attribute, and call this function once more: */
                         elmnt.removeAttribute("jlInclude");
-                        JlWebManager.includeHTML();
                         JlWebManager.onHTML_Included();
                         }
                     }
